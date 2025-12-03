@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foyaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Foyaku</h1>
+            <div class="nav-buttons">
+                <button class="nav-btn active" id="homeBtn" onclick="showHome()">Beranda</button>
+                <button class="nav-btn" id="cartBtn" onclick="showCart()">
+                    Keranjang <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <button class="nav-btn" id="historyBtn" onclick="showHistory()">Riwayat Pesanan</button>
+            </div>
+        </div>
+    </div>
 
+    <div class="container">
+        <!-- Home Page -->
+        <div class="home-page" id="homePage">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Cari produk">
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <div class="product-card">
+                    <img src="PIC/baju.jpg" alt="Baju" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Baju Blus</div>
+                        <div class="product-price">Rp639.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(1, 'Baju Blus', 639999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/jeans.jpg" alt="Jeans" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Jeans Blue</div>
+                        <div class="product-price">Rp799.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(2, 'Jeans Blue', 799999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/sepatu.jpg" alt="Sepatu" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Sepatu Star</div>
+                        <div class="product-price">Rp554.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(3, 'Sepatu Star', 554999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/bandana.jpg" alt="Bandana" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Bandana</div>
+                        <div class="product-price">Rp299.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(4, 'Bandana', 299999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/anting.jpg" alt="Anting" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Anting Diamond</div>
+                        <div class="product-price">Rp1.499.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(5, 'Anting Diamond', 1499999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/kacamata.jpg" alt="Kacamata" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Kacamata Silver</div>
+                        <div class="product-price">Rp379.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(6, 'Kacamata Silver', 379999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/kemeja.jpg" alt="Kemeja" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Kemeja</div>
+                        <div class="product-price">Rp189.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(7, 'Kemeja', 189999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/kalung.jpg" alt="Kalung" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Kalung</div>
+                        <div class="product-price">Rp799.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(8, 'Kalung', 799999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/tapi.jpg" alt="Topi" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Topi</div>
+                        <div class="product-price">Rp249.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(9, 'Topi', 249999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/jeans2.jpg" alt="Jeans Black" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Jeans Black</div>
+                        <div class="product-price">Rp699.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(10, 'Jeans Black', 699999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/jaket.jpg" alt="Jaket" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Jaket</div>
+                        <div class="product-price">Rp1.199.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(11, 'Jaket', 1199999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/ganci.jpg" alt="Ganci" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Gantungan Kunci</div>
+                        <div class="product-price">Rp99.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(12, 'Gantungan Kunci', 99999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/cincin.jpg" alt="Cincin" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Cincin</div>
+                        <div class="product-price">Rp14.999.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(13, 'Cincin', 14999999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/jedai.jpg" alt="Jedai" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Jepit Rambut</div>
+                        <div class="product-price">Rp1.999.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(14, 'Jepit Rambut', 1999999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/crocs.jpg" alt="Crocs" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Crocs</div>
+                        <div class="product-price">Rp1.299.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(15, 'Crocs', 1299999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/anting2.jpg" alt="Anting" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Anting Silver</div>
+                        <div class="product-price">Rp599.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(16, 'Anting Silver', 599999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/tas.jpg" alt="Tas" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Tas</div>
+                        <div class="product-price">Rp749.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(17, 'Tas', 749999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="PIC/dasi.jpg" alt="Dasi" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Dasi</div>
+                        <div class="product-price">Rp199.999</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(18, 'Dasi', 199999)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div class="cart-page" id="cartPage">
+            <h2 style="margin-bottom: 20px; color: #333;">Keranjang Saya</h2>
+            <div id="cartItems"></div>
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span id="totalPrice">Rp0</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutModal()">Checkout</button>
+            </div>
+            <div class="empty-cart" id="emptyCart">
+                <div>Keranjang Anda masih kosong</div>
+            </div>
+        </div>
+    
+        <div class="history-page" id="historyPage">
+            <h2 style="margin-bottom: 20px; color: #333;">Riwayat Pesanan</h2>
+            <div id="historyItems"></div>
+            <div class="empty-cart" id="emptyHistory">
+                <div>Belum ada riwayat pesanan</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">Konfirmasi Pembayaran</div>
+            
+            <div class="form-group">
+                <label class="form-label">Alamat Pengiriman</label>
+                <textarea id="shippingAddress" class="form-input" rows="3" placeholder="Masukkan alamat lengkap pengiriman"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Metode Pembayaran</label>
+                <div class="payment-options">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="QRIS" checked>
+                        <span>QRIS</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="COD">
+                        <span>COD (Cash on Delivery)</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Transfer Bank">
+                        <span>Transfer Bank</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
+                    <span>Total Pembayaran:</span>
+                    <span id="modalTotalPrice" style="color: #759eeb;">Rp0</span>
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="modal-btn btn-cancel" onclick="closeCheckoutModal()">Batal</button>
+                <button class="modal-btn btn-confirm" onclick="confirmCheckout()">Konfirmasi Pembayaran</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
